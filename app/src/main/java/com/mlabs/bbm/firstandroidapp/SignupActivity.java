@@ -131,6 +131,13 @@ public class SignupActivity extends Activity {
                         Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_LONG).show();
                         Intent intent=new Intent(SignupActivity.this, LogIn.class);
                         startActivity(intent);
+                        emailTxt.setText("");
+                        passTxt.setText("");
+                        confirmpassTxt.setText("");
+                        Fnametxt.setText("");
+                        Lnametxt.setText("");
+                        Usertxt.setText("");
+                        Fnametxt.requestFocus();
 
                     } else {
                         Toast.makeText(getApplicationContext(), "Password did not match", Toast.LENGTH_LONG).show();

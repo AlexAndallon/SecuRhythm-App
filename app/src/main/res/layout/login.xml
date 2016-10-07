@@ -17,7 +17,9 @@
         android:layout_above="@+id/pwdTxt"
         android:layout_alignLeft="@+id/pwdTxt"
         android:layout_alignStart="@+id/pwdTxt"
-        android:hint="Email or Username"/>
+        android:hint="Email or Username"
+        android:layout_toLeftOf="@+id/showbtn"
+        android:layout_toStartOf="@+id/showbtn" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -27,10 +29,10 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Show"
         android:id="@+id/showbtn"
-        android:layout_alignBaseline="@+id/pwdTxt"
         android:layout_alignBottom="@+id/pwdTxt"
-        android:layout_alignRight="@+id/emailTxt"
-        android:layout_alignEnd="@+id/emailTxt" />
+        android:layout_below="@+id/emailTxt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,16 +60,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="34dp" />
 
-    <EditText
-        android:id="@+id/pwdTxt"
-        android:layout_width="2in"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:password="true"
-        android:layout_above="@+id/logInBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="52dp" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,6 +69,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="27dp" />
+
+    <EditText
+        android:id="@+id/pwdTxt"
+        android:layout_width="2in"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:password="true"
+        android:layout_marginBottom="18dp"
+        android:layout_above="@+id/logInBtn"
+        android:layout_toLeftOf="@+id/showbtn"
+        android:layout_toStartOf="@+id/showbtn" />
 
 
 </RelativeLayout>

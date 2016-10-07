@@ -79,6 +79,9 @@ public class LogIn extends Activity {
         if (sqlDB.validateUser(emailTxt.getText().toString(),pwdTxt.getText().toString())) {
             Intent intent = new Intent(LogIn.this, MainActivity.class);
             startActivity(intent);
+            pwdTxt.setText("");
+            emailTxt.setText("");
+            emailTxt.requestFocus();
         } else{
             Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_SHORT).show();
         }
@@ -102,6 +105,15 @@ public class LogIn extends Activity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
+        startActivity(intent);
+        finish();
+        System.exit(0);
+    }
 
 
 }
